@@ -12,7 +12,7 @@
 #import "RandomWithSeedPlugIn.h"
 
 #define	kQCPlugIn_Name				@"Random With Seed"
-#define	kQCPlugIn_Description		@"Untitled description"
+#define	kQCPlugIn_Description		@"Random With Seed PlugIn for Quartz Composer"
 
 @implementation RandomWithSeedPlugIn
 
@@ -128,7 +128,7 @@ Here you need to declare the input / output properties as dynamic as Quartz Comp
 	*/
 	
 	srand((unsigned)(CFAbsoluteTimeGetCurrent() * self.inputNumber));
-	self.outputNumber = rand() * rand() % 100;
+	self.outputNumber = (rand() * rand() % 100) * 0.01;
 	
 	return YES;
 }
